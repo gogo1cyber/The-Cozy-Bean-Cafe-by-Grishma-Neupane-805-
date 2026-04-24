@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | The Cozy Bean</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* 1. RESET & CORE THEME */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background-color: #0d0a09; /* Deep Coffee Black */
+      color: #f4f4f4;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 2. HEADER FIX */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(13, 10, 9, 0.95);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(201, 162, 107, 0.1);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #c9a26b;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #c9a26b; opacity: 1; }
+
+    /* 3. MAIN WRAPPER */
+    .main-content {
+      padding-top: 120px; /* Space for fixed header */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 5%;
+    }
+
+    .intro-text {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+
+    .intro-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    .intro-text h1 span { font-style: italic; font-weight: 400; color: #c9a26b; }
+
+    /* 4. GRID SYSTEM (Prevents the "messed up" layout) */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr; /* Form is wider than Info */
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* 5. FORM STYLING */
+    .form-section h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    .input-group { margin-bottom: 25px; }
+
+    .input-group label {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #c9a26b;
+      margin-bottom: 8px;
+    }
+
+    .input-group input, 
+    .input-group textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #333;
+      padding: 10px 0;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus { border-bottom-color: #c9a26b; }
+
+    .btn-send {
+      background: #c9a26b;
+      color: #000;
+      border: none;
+      padding: 15px 40px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-send:hover { background: #fff; transform: translateY(-2px); }
+
+    /* 6. INFO SECTION STYLING */
+    .info-card {
+      background: #161210;
+      padding: 40px;
+      border-radius: 4px;
+    }
+
+    .info-item { margin-bottom: 30px; }
+
+    .info-item h3 {
+      font-size: 1rem;
+      color: #c9a26b;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-item p { color: #aaa; font-size: 0.95rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .intro-text h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">☕ The Cozy Bean</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="reviews.html">Reviews</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <section class="intro-text">
+    <p style="color: #c9a26b; letter-spacing: 3px; font-size: 0.8rem;">GET IN TOUCH</p>
+    <h1>Send us a <span>message.</span></h1>
+    <p>Whether you're curious about our beans or just want to say hi, we're here.</p>
+  </section>
+
+  <div class="contact-grid">
+    <section class="form-section">
+      <form>
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Grishma Neupane">
+        </div>
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@gmail.com">
+        </div>
+        <div class="input-group">
+          <label>Your Message</label>
+          <textarea rows="4" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+    </section>
+
+    <aside class="info-card">
+      <div class="info-item">
+        <h3>📍 Location</h3>
+        <p>Kathmandu, Nepal<br>New Baneshwor, 44600</p>
+      </div>
+      <div class="info-item">
+        <h3>📞 Reach Out</h3>
+        <p>+977-98XXXXXXX<br>cozybean@gmail.com</p>
+      </div>
+      <div class="info-item">
+        <h3>🕒 Brewing Hours</h3>
+        <p>Mon - Fri: 7AM - 8PM<br>Sat - Sun: 8AM - 9PM</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+</body>
+</html>
